@@ -1,0 +1,14 @@
+*
+!.gitignore
+!README.md
+!wp-content/
+wp-content/*
+!wp-content/themes/
+wp-content/themes/*
+!wp-content/themes/portfolio
+!wp-content/themes/portfolio/*
+!wp-content/themes/portfolio/resources/*
+!wp-content/themes/portfolio/resources/css/*
+!wp-content/themes/portfolio/resources/js/*
+!wp-content/themes/portfolio/resources/sass/*
+!wp-content/themes/portfolio/resources/sass/components/*
