@@ -4,6 +4,7 @@ html, html * {
 }
 html body, html * body {
   background-color: #fff;
+  font-family: nunito, Helvetica, Arial, sans-serif;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -69,6 +70,215 @@ table {
   margin: -1px;
   padding: 0;
   border: 0;
+}
+
+.home {
+  background: linear-gradient(to right, #ffeeee, #ddefbb);
+  height: 100vh;
+}
+
+.footer {
+  background: linear-gradient(to right, #ffeeee, #ddefbb);
+  padding-bottom: 2rem;
+}
+.footer__container {
+  display: flex;
+  margin: 0 auto;
+  width: 80%;
+  height: auto;
+  border-radius: 40px;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(20px);
+}
+.footer__container .copyright {
+  font-size: 1rem;
+  padding: 2rem 0 2rem 6.25rem;
+}
+.footer__container ul {
+  display: flex;
+  margin: 0 auto;
+}
+.footer__container ul li {
+  padding: 1.5rem 20%;
+}
+.footer__container .legals {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #000;
+  margin-left: auto;
+  padding: 2rem 6.25rem 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .footer {
+    width: 100%;
+  }
+  .footer__container {
+    flex-direction: column;
+    width: 90%;
+  }
+  .footer__container .copyright, .footer__container .legals {
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+  .footer__container ul {
+    justify-content: center;
+  }
+}
+header {
+  position: fixed;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 25%;
+  margin: 0 auto;
+  z-index: 1;
+}
+header nav ul {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(20px);
+  border-radius: 40px;
+}
+header nav ul li {
+  padding: 1.5rem 2rem;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 1rem;
+  font-weight: bold;
+}
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1000px) {
+  header {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  header nav ul li {
+    padding: 1.5rem 1rem;
+  }
+}
+.contact {
+  background: linear-gradient(to right, #ffeeee, #ddefbb);
+  min-height: 100vh;
+}
+.contact section {
+  display: flex;
+  padding: 10rem 0 0;
+  justify-content: center;
+  gap: 25%;
+  margin: 0 auto;
+  max-width: 80vw;
+}
+.contact section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  padding-bottom: 2rem;
+}
+.contact section .required {
+  font-size: 1rem;
+  padding-bottom: 2rem;
+}
+.contact section fieldset {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+.contact section fieldset div {
+  display: flex;
+  flex-direction: column;
+}
+.contact section fieldset div .submit {
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 1rem 5rem;
+  border: 2px solid #000;
+  border-radius: 30px;
+  margin-bottom: 5rem;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.contact section fieldset .email {
+  max-width: 100%;
+  grid-column: 1/-1;
+}
+.contact section fieldset div:nth-child(4) {
+  grid-column: 1/3;
+}
+.contact section fieldset label {
+  font-size: 1rem;
+  font-weight: bold;
+  padding-bottom: 2rem;
+}
+.contact section fieldset input {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  border-bottom: 1px solid #000;
+}
+.contact section fieldset textarea {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  border-bottom: 1px solid #000;
+  margin-bottom: 2rem;
+  max-width: 31.25rem;
+  max-height: 10rem;
+  min-width: 100%;
+  min-height: 5rem;
+}
+.contact section aside h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 5rem;
+}
+.contact section aside .infos1 {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 1.5rem 0;
+}
+.contact section aside .infos2 {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #000;
+}
+.contact section aside .infos2:hover {
+  text-decoration: underline;
+}
+.contact section aside .socials__infos {
+  margin-top: 2rem;
+  display: flex;
+  gap: 2rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .contact section {
+    flex-direction: column;
+  }
+  .contact section fieldset {
+    display: block;
+  }
+  .contact section fieldset div {
+    padding-bottom: 2rem;
+  }
+  .contact aside {
+    margin-bottom: 5rem;
+  }
+}
+.projects {
+  background: linear-gradient(to right, #ffeeee, #ddefbb);
+  min-height: 100vh;
+}
+
+.about {
+  background: linear-gradient(to right, #ffeeee, #ddefbb);
+  min-height: 100vh;
+}
+.about h2 {
+  font-size: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

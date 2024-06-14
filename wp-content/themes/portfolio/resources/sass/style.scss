@@ -4,8 +4,15 @@ html, html * {
 
   body {
     background-color: #fff;
+    font-family: nunito, Helvetica, Arial, sans-serif;
   }
 }
 
 @import "reset";
 @import "helpers";
+@import "components/home";
+@import "components/footer";
+@import "components/header";
+@import "components/contact";
+@import "components/projects";
+@import "components/about";
