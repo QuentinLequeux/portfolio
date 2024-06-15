@@ -3,8 +3,8 @@ html, html * {
   box-sizing: border-box;
 }
 html body, html * body {
-  background-color: #fff;
-  font-family: nunito, Helvetica, Arial, sans-serif;
+  background: linear-gradient(to right, #ffeeee, #ddefbb);
+  font-family: Nunito, Helvetica, Arial, sans-serif;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -72,23 +72,213 @@ table {
   border: 0;
 }
 
-.home {
-  background: linear-gradient(to right, #ffeeee, #ddefbb);
-  height: 100vh;
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  padding: 10rem 3rem 2rem;
+}
+.cards .card {
+  border-radius: 40px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 0 20px;
+}
+.cards .logo {
+  grid-area: 1/1/2/2;
+  background: #fff;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cards .description {
+  grid-area: 1/2/2/5;
+  background: #fff;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.cards .description div {
+  padding: 0 2rem;
+}
+.cards .description div h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+.cards .description div p {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.cards .socials {
+  grid-area: 2/1/3/5;
+  background: #fff;
+  height: 6.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cards .socials div a {
+  margin: 0 6.25rem 0 0;
+  text-decoration: none;
+}
+.cards .socials div a:last-of-type {
+  margin: 0;
+}
+.cards .socials div a:hover {
+  filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+}
+.cards .project {
+  grid-area: 3/1/4/5;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.cards .project div {
+  display: flex;
+}
+.cards .project div div {
+  flex-direction: column;
+  justify-content: center;
+  max-width: 600px;
+  padding: 0 10rem 0 2rem;
+}
+.cards .project div div h2 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+.cards .project div div p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 2rem;
+}
+.cards .project div div a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 40px;
+  width: 175px;
+  padding: 1rem 2rem;
+}
+.cards .project div img {
+  width: 700px;
+  height: 400px;
+  border-radius: 40px;
+  object-fit: cover;
+  margin: 0 2rem 0 0;
+}
+.cards .article1 {
+  grid-area: 4/1/5/3;
+}
+.cards .article2 {
+  grid-area: 4/3/5/5;
+}
+.cards .article1, .cards .article2 {
+  height: 400px;
+  position: relative;
+}
+.cards .article1 h2, .cards .article2 h2 {
+  font-size: 1.5rem;
+  position: absolute;
+  color: #fff;
+  bottom: 2rem;
+  left: 2rem;
+  padding-right: 1rem;
+}
+.cards .article1 img:hover, .cards .article2 img:hover {
+  transform: scale(1.05) translate(0, 0);
+}
+.cards .article1 img, .cards .article2 img {
+  border-radius: 40px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.2s ease-in-out 0.2s;
+}
+.cards .hello {
+  grid-area: 5/1/6/5;
+  background: #fff;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cards .hello div {
+  display: flex;
+  flex-direction: column;
+}
+.cards .hello div h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.cards .hello div a {
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 1rem;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 40px;
+  text-align: center;
+  transition: transform 0.1s ease-in-out 0.1s;
+}
+.cards .hello div a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  transform: scale(1.05) translate(0, 0);
 }
 
+@media screen and (max-width: 1100px) {
+  .cards {
+    padding: 10rem 2rem 2rem;
+  }
+  .cards .logo {
+    grid-area: 1/1/2/5;
+  }
+  .cards .description {
+    grid-area: 2/1/2/5;
+  }
+  .cards .socials {
+    grid-area: 3/1/3/5;
+  }
+  .cards .project {
+    grid-area: 4/1/4/5;
+    height: auto;
+  }
+  .cards .project div {
+    flex-direction: column;
+  }
+  .cards .project div div {
+    padding: 0 1.5rem;
+  }
+  .cards .project div img {
+    width: 90%;
+    height: 100%;
+  }
+  .cards .article1 {
+    grid-area: 5/1/5/5;
+  }
+  .cards .article2 {
+    grid-area: 6/1/6/5;
+  }
+  .cards .hello {
+    grid-area: 7/1/7/5;
+  }
+}
 .footer {
-  background: linear-gradient(to right, #ffeeee, #ddefbb);
   padding-bottom: 2rem;
 }
 .footer__container {
   display: flex;
   margin: 0 auto;
-  width: 80%;
+  width: 94%;
   height: auto;
-  border-radius: 40px;
+  border-radius: 2.5rem;
   background-color: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(1rem);
 }
 .footer__container .copyright {
   font-size: 1rem;
@@ -96,20 +286,29 @@ table {
 }
 .footer__container ul {
   display: flex;
-  margin: 0 auto;
+  margin: auto;
 }
 .footer__container ul li {
   padding: 1.5rem 20%;
 }
+.footer__container ul li a img:hover {
+  filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+}
 .footer__container .legals {
   font-size: 1rem;
-  text-decoration: none;
   color: #000;
-  margin-left: auto;
-  padding: 2rem 6.25rem 0;
+  margin: 2rem 6.25rem 0 8rem;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: text-decoration-color 0.4s ease-in-out, text-decoration-thickness 0.4s ease-in-out;
+  height: 20px;
+}
+.footer__container .legals:hover {
+  text-decoration-color: #000;
+  text-decoration-thickness: 1px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1100px) {
   .footer {
     width: 100%;
   }
@@ -117,9 +316,14 @@ table {
     flex-direction: column;
     width: 90%;
   }
-  .footer__container .copyright, .footer__container .legals {
-    margin: 0 auto;
-    padding: 2rem 0;
+  .footer__container .copyright {
+    margin: auto;
+    padding: 2rem 0 0 0;
+  }
+  .footer__container .legals {
+    margin: auto;
+    padding: 0 0 2rem 0;
+    height: auto;
   }
   .footer__container ul {
     justify-content: center;
@@ -138,38 +342,36 @@ header nav ul {
   display: flex;
   justify-content: space-around;
   background-color: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(20px);
-  border-radius: 40px;
-}
-header nav ul li {
-  padding: 1.5rem 2rem;
+  backdrop-filter: blur(1rem);
+  border-radius: 2.5rem;
 }
 header nav ul li a {
   text-decoration: none;
   color: rgba(0, 0, 0, 0.8);
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 700;
+  display: inline-block;
+  padding: 1.5rem 2rem;
+  transition: 0.4s ease-in-out;
+  border-radius: 2rem;
 }
 header nav ul li a:hover {
-  text-decoration: underline;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 2rem;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 600px) {
   header {
     left: 50%;
     transform: translateX(-50%);
   }
-  header nav ul li {
+  header nav ul li a {
     padding: 1.5rem 1rem;
   }
 }
-.contact {
-  background: linear-gradient(to right, #ffeeee, #ddefbb);
-  min-height: 100vh;
-}
 .contact section {
   display: flex;
-  padding: 10rem 0 0;
+  padding: 12rem 0 0;
   justify-content: center;
   gap: 25%;
   margin: 0 auto;
@@ -253,6 +455,9 @@ header nav ul li a:hover {
   display: flex;
   gap: 2rem;
 }
+.contact section aside .socials__infos a:hover {
+  filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+}
 
 @media screen and (max-width: 1000px) {
   .contact section {
@@ -269,12 +474,30 @@ header nav ul li a:hover {
   }
 }
 .projects {
-  background: linear-gradient(to right, #ffeeee, #ddefbb);
   min-height: 100vh;
+}
+.projects section {
+  padding: 10rem 3rem 2rem;
+}
+.projects section h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 5rem;
+  text-align: center;
+}
+.projects section article {
+  display: flex;
+  background-color: red;
+}
+.projects section article div {
+  flex-direction: column;
+}
+.projects section article img {
+  border-radius: 2.5rem;
+  object-fit: cover;
 }
 
 .about {
-  background: linear-gradient(to right, #ffeeee, #ddefbb);
   min-height: 100vh;
 }
 .about h2 {

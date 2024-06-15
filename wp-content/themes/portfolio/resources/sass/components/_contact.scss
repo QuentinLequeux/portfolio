@@ -1,10 +1,8 @@
 .contact {
-  background: linear-gradient(to right, #ffeeee, #ddefbb);
-  min-height: 100vh;
 
   section {
     display: flex;
-    padding: 10rem 0 0;
+    padding: 12rem 0 0;
     justify-content: center;
     gap: 25%;
     margin: 0 auto;
@@ -104,6 +102,10 @@
         margin-top: 2rem;
         display: flex;
         gap: 2rem;
+
+        a:hover {
+          filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+        }
       }
     }
   }

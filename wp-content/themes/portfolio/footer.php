@@ -9,26 +9,26 @@
             </p>
             <ul>
                 <li>
-                    <a class="socials" href="#" title="Vers ma page Facebook">
-                        <img src="/wp-content/themes/portfolio/resources/img/facebook.svg" alt="Logo svg de Facebook"
+                    <a href="https://www.facebook.com/quentin.lequeux.5/" title="Vers ma page Facebook">
+                        <img src="/wp-content/themes/portfolio/resources/img/facebook.svg" alt="icône de Facebook"
                              width="25" height="25">
                     </a>
                 </li>
                 <li>
-                    <a href="#" title="Vers ma page Linkedin">
-                        <img src="/wp-content/themes/portfolio/resources/img/linkedin.svg" alt="Logo svg de Linkedin"
+                    <a href="https://lu.linkedin.com/in/quentin-lequeux-8a11a3192" title="Vers ma page Linkedin">
+                        <img src="/wp-content/themes/portfolio/resources/img/linkedin.svg" alt="icône de Linkedin"
                              width="25" height="25">
                     </a>
                 </li>
                 <li>
-                    <a href="#" title="Vers ma page Github">
-                        <img src="/wp-content/themes/portfolio/resources/img/github.svg" alt="Logo svg de Github"
+                    <a href="https://github.com/QuentinLequeux" title="Vers ma page Github">
+                        <img src="/wp-content/themes/portfolio/resources/img/github.svg" alt="icône de Github"
                              width="25" height="25">
                     </a>
                 </li>
                 <li>
-                    <a href="#" title="Envoyer un email">
-                        <img src="/wp-content/themes/portfolio/resources/img/email.svg" alt="Logo svg" width="25"
+                    <a href="mailto:quent789@gmail.com" title="Envoyer un email">
+                        <img src="/wp-content/themes/portfolio/resources/img/email.svg" alt="icône" width="25"
                              height="25">
                     </a>
                 </li>

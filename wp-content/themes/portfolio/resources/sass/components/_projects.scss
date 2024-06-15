@@ -1,4 +1,28 @@
 .projects {
-  background: linear-gradient(to right, #ffeeee, #ddefbb);
   min-height: 100vh;
+
+  section {
+    padding: 10rem 3rem 2rem;
+
+    h2 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 5rem;
+      text-align: center;
+    }
+
+    article {
+      display: flex;
+      background-color: red;
+
+      div {
+        flex-direction: column;
+      }
+
+      img {
+        border-radius: 2.5rem;
+        object-fit: cover;
+      }
+    }
+  }
 }

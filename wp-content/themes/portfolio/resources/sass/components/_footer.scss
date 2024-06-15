@@ -1,20 +1,14 @@
 .footer {
-  background: linear-gradient(to right, #ffeeee, #ddefbb);
   padding-bottom: 2rem;
 
   &__container {
     display: flex;
     margin: 0 auto;
-    width: 80%;
+    width: 94%;
     height: auto;
-    border-radius: 40px;
-    background-color: rgba(0,0,0,.2);
-    //position: absolute;
-    //bottom: 3rem;
-    //left: 10%;
-    backdrop-filter: blur(20px);
-    //display: flex;
-    //width: 100%;
+    border-radius: 2.5rem;
+    background-color: rgba(0, 0, 0, .2);
+    backdrop-filter: blur(1rem);
 
     .copyright {
       font-size: 1rem;
@@ -23,25 +17,38 @@
 
     ul {
       display: flex;
-      margin: 0 auto;
+      margin: auto;
 
       li {
         padding: 1.5rem 20%;
-        //padding: 1.5rem 6.25rem 1.5rem 0;
+
+        a {
+
+          img:hover {
+            filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+          }
+        }
       }
     }
 
     .legals {
       font-size: 1rem;
-      text-decoration: none;
       color: #000;
-      margin-left: auto;
-      padding: 2rem 6.25rem 0;
+      margin: 2rem 6.25rem 0 8rem;
+      text-decoration: underline;
+      text-decoration-color: transparent;
+      transition: text-decoration-color 0.4s ease-in-out, text-decoration-thickness 0.4s ease-in-out;
+      height: 20px;
+    }
+
+    .legals:hover {
+      text-decoration-color: #000;
+      text-decoration-thickness: 1px;
     }
   }
 }
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1100px) {
   .footer {
     width: 100%;
 
@@ -49,12 +56,18 @@
       flex-direction: column;
       width: 90%;
 
-      .copyright, .legals {
-        margin: 0 auto;
-        padding: 2rem 0;
+      .copyright {
+        margin: auto;
+        padding: 2rem 0 0 0;
       }
 
-      ul{
+      .legals {
+        margin: auto;
+        padding: 0 0 2rem 0;
+        height: auto;
+      }
+
+      ul {
         justify-content: center;
       }
     }
