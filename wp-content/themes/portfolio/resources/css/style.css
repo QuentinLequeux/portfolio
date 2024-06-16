@@ -3,6 +3,8 @@ html, html * {
   box-sizing: border-box;
 }
 html body, html * body {
+  background: -webkit-gradient(linear, left top, right top, from(#ffeeee), to(#ddefbb));
+  background: -o-linear-gradient(left, #ffeeee, #ddefbb);
   background: linear-gradient(to right, #ffeeee, #ddefbb);
   font-family: Nunito, Helvetica, Arial, sans-serif;
 }
@@ -136,6 +138,7 @@ table {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  background-color: #ffaaaa;
 }
 .cards .project div {
   display: flex;
@@ -197,7 +200,7 @@ table {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.2s ease-in-out 0.2s;
+  transition: transform 0.1s ease-in-out 0.1s;
 }
 .cards .hello {
   grid-area: 5/1/6/5;
@@ -224,10 +227,9 @@ table {
   border: 1px solid #000;
   border-radius: 40px;
   text-align: center;
-  transition: transform 0.1s ease-in-out 0.1s;
+  transition: transform 0.2s ease-in-out;
 }
 .cards .hello div a:hover {
-  background-color: rgba(0, 0, 0, 0.3);
   transform: scale(1.05) translate(0, 0);
 }
 
@@ -272,12 +274,15 @@ table {
   padding-bottom: 2rem;
 }
 .footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
   width: 94%;
   height: auto;
   border-radius: 2.5rem;
   background-color: rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(1rem);
   backdrop-filter: blur(1rem);
 }
 .footer__container .copyright {
@@ -285,6 +290,8 @@ table {
   padding: 2rem 0 2rem 6.25rem;
 }
 .footer__container ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: auto;
 }
@@ -292,6 +299,7 @@ table {
   padding: 1.5rem 20%;
 }
 .footer__container ul li a img:hover {
+  -webkit-filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
   filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
 }
 .footer__container .legals {
@@ -299,11 +307,17 @@ table {
   color: #000;
   margin: 2rem 6.25rem 0 8rem;
   text-decoration: underline;
+  -webkit-text-decoration-color: transparent;
   text-decoration-color: transparent;
+  -webkit-transition: text-decoration-thickness 0.4s ease-in-out, -webkit-text-decoration-color 0.4s ease-in-out;
+  transition: text-decoration-thickness 0.4s ease-in-out, -webkit-text-decoration-color 0.4s ease-in-out;
+  -o-transition: text-decoration-color 0.4s ease-in-out, text-decoration-thickness 0.4s ease-in-out;
   transition: text-decoration-color 0.4s ease-in-out, text-decoration-thickness 0.4s ease-in-out;
+  transition: text-decoration-color 0.4s ease-in-out, text-decoration-thickness 0.4s ease-in-out, -webkit-text-decoration-color 0.4s ease-in-out;
   height: 20px;
 }
 .footer__container .legals:hover {
+  -webkit-text-decoration-color: #000;
   text-decoration-color: #000;
   text-decoration-thickness: 1px;
 }
@@ -313,6 +327,9 @@ table {
     width: 100%;
   }
   .footer__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     width: 90%;
   }
@@ -326,6 +343,8 @@ table {
     height: auto;
   }
   .footer__container ul {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
 }
@@ -333,15 +352,21 @@ header {
   position: fixed;
   top: 2rem;
   left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   min-width: 25%;
   margin: 0 auto;
   z-index: 1;
 }
 header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
   background-color: rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(1rem);
   backdrop-filter: blur(1rem);
   border-radius: 2.5rem;
 }
@@ -352,6 +377,8 @@ header nav ul li a {
   font-weight: 700;
   display: inline-block;
   padding: 1.5rem 2rem;
+  -webkit-transition: 0.4s ease-in-out;
+  -o-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
   border-radius: 2rem;
 }
@@ -363,6 +390,8 @@ header nav ul li a:hover {
 @media screen and (max-width: 600px) {
   header {
     left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
     transform: translateX(-50%);
   }
   header nav ul li a {
@@ -370,8 +399,12 @@ header nav ul li a:hover {
   }
 }
 .contact section {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  padding: 12rem 0 0;
+  padding: 14rem 0 0;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   gap: 25%;
   margin: 0 auto;
@@ -379,89 +412,130 @@ header nav ul li a:hover {
 }
 .contact section h2 {
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 700;
   padding-bottom: 2rem;
 }
 .contact section .required {
   font-size: 1rem;
   padding-bottom: 2rem;
 }
+.contact section .star {
+  color: #ff0000;
+}
 .contact section fieldset {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 2rem 1fr;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
 .contact section fieldset div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 .contact section fieldset div .submit {
   cursor: pointer;
   font-size: 1rem;
-  font-weight: bold;
-  padding: 1rem 5rem;
-  border: 2px solid #000;
-  border-radius: 30px;
+  font-weight: 700;
+  padding: 1rem 6rem;
+  border: 1px solid #000;
+  border-radius: 2rem;
   margin-bottom: 5rem;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.1);
+  -webkit-transition: ease-in-out 0.3s;
+  -o-transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s;
+}
+.contact section fieldset div .submit:hover {
+  background-color: rgba(255, 255, 255, 0.8);
 }
 .contact section fieldset .email {
   max-width: 100%;
   grid-column: 1/-1;
 }
 .contact section fieldset div:nth-child(4) {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-column: 1/3;
 }
 .contact section fieldset label {
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 700;
   padding-bottom: 2rem;
 }
 .contact section fieldset input {
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+}
+.contact section fieldset input, .contact section fieldset textarea {
   background-color: rgba(0, 0, 0, 0);
   border: none;
   border-bottom: 1px solid #000;
 }
+.contact section fieldset input:focus, .contact section fieldset textarea:focus {
+  outline: none;
+  border: 2px solid #ff0000;
+  border-radius: 2rem;
+}
 .contact section fieldset textarea {
-  background-color: rgba(0, 0, 0, 0);
-  border: none;
-  border-bottom: 1px solid #000;
   margin-bottom: 2rem;
   max-width: 31.25rem;
   max-height: 10rem;
   min-width: 100%;
   min-height: 5rem;
+  padding: 1rem;
 }
 .contact section aside h3 {
   font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
 }
-.contact section aside .infos1 {
+.contact section aside p {
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 700;
   padding: 1.5rem 0;
 }
-.contact section aside .infos2 {
+.contact section aside a {
   font-size: 1rem;
-  text-decoration: none;
+  line-height: 1.5rem;
   color: #000;
-}
-.contact section aside .infos2:hover {
   text-decoration: underline;
+  -webkit-text-decoration-color: transparent;
+  text-decoration-color: transparent;
+  -webkit-transition: text-decoration-thickness 0.3s ease-in-out, -webkit-text-decoration-color 0.3s ease-in-out;
+  transition: text-decoration-thickness 0.3s ease-in-out, -webkit-text-decoration-color 0.3s ease-in-out;
+  -o-transition: text-decoration-color 0.3s ease-in-out, text-decoration-thickness 0.3s ease-in-out;
+  transition: text-decoration-color 0.3s ease-in-out, text-decoration-thickness 0.3s ease-in-out;
+  transition: text-decoration-color 0.3s ease-in-out, text-decoration-thickness 0.3s ease-in-out, -webkit-text-decoration-color 0.3s ease-in-out;
+}
+.contact section aside a:hover {
+  -webkit-text-decoration-color: #000;
+  text-decoration-color: #000;
+  text-decoration-thickness: 1px;
 }
 .contact section aside .socials__infos {
   margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 2rem;
 }
 .contact section aside .socials__infos a:hover {
+  -webkit-filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
   filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
 }
 
 @media screen and (max-width: 1000px) {
   .contact section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    padding-top: 10rem;
   }
   .contact section fieldset {
     display: block;
@@ -469,34 +543,135 @@ header nav ul li a:hover {
   .contact section fieldset div {
     padding-bottom: 2rem;
   }
+  .contact section fieldset div .submit {
+    margin-bottom: 2rem;
+  }
+  .contact section aside {
+    padding: 2rem;
+    border: 1px solid #000;
+    border-radius: 2rem;
+  }
   .contact aside {
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
   }
 }
-.projects {
-  min-height: 100vh;
-}
 .projects section {
-  padding: 10rem 3rem 2rem;
+  padding: 12rem 3rem 2rem;
 }
 .projects section h2 {
   font-size: 3rem;
   font-weight: 700;
-  margin-bottom: 5rem;
+  margin-bottom: 6rem;
   text-align: center;
 }
 .projects section article {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  background-color: red;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #ffaaaa;
+  border-radius: 2.5rem;
+  height: 37.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid #000;
 }
 .projects section article div {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  max-width: 37.5rem;
+  padding: 0 2rem;
+}
+.projects section article div h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+.projects section article div span {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 2.5rem;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.projects section article div p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin: 2rem 0 4rem 0;
+}
+.projects section article div a {
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #000;
+  padding: 1rem 3rem;
+  border: 1px solid #000;
+  border-radius: 2.5rem;
+  -webkit-transition: 0.4s ease-in-out;
+  -o-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+.projects section article div a:hover {
+  background-color: rgba(255, 255, 255, 0.9);
 }
 .projects section article img {
   border-radius: 2.5rem;
+  -o-object-fit: cover;
   object-fit: cover;
+  max-width: 100%;
+}
+.projects section article:nth-child(3) {
+  background-color: #ddefa0;
+}
+.projects section article:nth-child(4) {
+  background-color: #dddfff;
+}
+.projects section article:nth-child(5) {
+  background-color: #aaafff;
 }
 
+@media screen and (max-width: 1200px) {
+  .projects section {
+    padding: 12rem 2rem 2rem;
+  }
+  .projects section article {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    border: 1px solid #000;
+  }
+  .projects section article div {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+    padding: 0 1rem;
+    min-height: 325px;
+  }
+  .projects section article div h3 {
+    padding-top: 1rem;
+  }
+  .projects section article div p {
+    margin-bottom: 3rem;
+  }
+  .projects section article img {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+}
+@media screen and (max-width: 750px) {
+  .projects section article img {
+    max-height: 15.625rem;
+    border-radius: 2.5rem 2.5rem 0 0;
+  }
+}
 .about {
   min-height: 100vh;
 }

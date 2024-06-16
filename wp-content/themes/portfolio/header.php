@@ -13,13 +13,13 @@
           content="front-end, back-end, fullstack, design, web design, web, SEO, UX, UI, wordpress, étudiant, student, développeur,
           CSS, HTML, PHP, JS, TS, typescript, javascript, Portfolio, Quentin, Lequeux, Quentin Lequeux, HEPL, programmation, digital,
           infographie, Photoshop, Illustrator, Adobe, multimédia, mobile, responsive, designer, SQL">
-    <!--CSS-->
-    <link rel="stylesheet" href="<?= dw_asset('css/style.css'); ?>">
     <!--Favicon-->
     <link rel="icon" type="image/svg" href="/wp-content/themes/portfolio/resources/img/favicon.svg">
     <link rel="apple-touch-icon" type="image/svg" href="/wp-content/themes/portfolio/resources/img/favicon.svg">
     <link rel="apple-touch-icon-precomposed" type="image/svg" href="/wp-content/themes/portfolio/resources/img/favicon.svg">
     <!--Police-->
+    <!--CSS-->
+    <link rel="stylesheet" href="<?= dw_asset('css/style.css'); ?>">
     <!--<link rel="stylesheet" href="https://use.typekit.net/uru3cvy.css">-->
     <!--Titre-->
     <title><?= wp_title(''); ?> - Portfolio Quentin Lequeux</title>
@@ -33,7 +33,7 @@
         <h2 aria-level="2" role="heading" class="sro">
             Navigation principale
         </h2>
-        <ul tabindex="0">
+        <ul>
             <li>
                 <a href="<?= get_permalink(6)?>" title="Vers la page <?= get_the_title(6); ?>">
                     <?= get_the_title(6); ?>

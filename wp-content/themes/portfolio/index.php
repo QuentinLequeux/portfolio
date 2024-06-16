@@ -45,7 +45,7 @@ Template Name: Accueil
                 <?php
                 $projects = new WP_Query([
                     'category_name' => 'Projets',
-                    'posts_per_page' => 3,
+                    'posts_per_page' => 1,
                     'orderby' => 'date',
                     'order' => 'ASC'
                 ]);
@@ -54,6 +54,7 @@ Template Name: Accueil
                         <h2>
                             <?= get_the_title(43); ?>
                         </h2>
+                        <span><?= get_field('tag'); ?></span>
                         <p>
                             <?= get_the_content(null, false, 43); ?>
                         </p>

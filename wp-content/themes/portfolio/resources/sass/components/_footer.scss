@@ -2,12 +2,15 @@
   padding-bottom: 2rem;
 
   &__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin: 0 auto;
     width: 94%;
     height: auto;
     border-radius: 2.5rem;
     background-color: rgba(0, 0, 0, .2);
+    -webkit-backdrop-filter: blur(1rem);
     backdrop-filter: blur(1rem);
 
     .copyright {
@@ -16,6 +19,8 @@
     }
 
     ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
       margin: auto;
 
@@ -25,6 +30,7 @@
         a {
 
           img:hover {
+            -webkit-filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
             filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
           }
         }
@@ -36,12 +42,18 @@
       color: #000;
       margin: 2rem 6.25rem 0 8rem;
       text-decoration: underline;
+      -webkit-text-decoration-color: transparent;
       text-decoration-color: transparent;
+      -webkit-transition: text-decoration-thickness 0.4s ease-in-out, -webkit-text-decoration-color 0.4s ease-in-out;
+      transition: text-decoration-thickness 0.4s ease-in-out, -webkit-text-decoration-color 0.4s ease-in-out;
+      -o-transition: text-decoration-color 0.4s ease-in-out, text-decoration-thickness 0.4s ease-in-out;
       transition: text-decoration-color 0.4s ease-in-out, text-decoration-thickness 0.4s ease-in-out;
+      transition: text-decoration-color 0.4s ease-in-out, text-decoration-thickness 0.4s ease-in-out, -webkit-text-decoration-color 0.4s ease-in-out;
       height: 20px;
     }
 
     .legals:hover {
+      -webkit-text-decoration-color: #000;
       text-decoration-color: #000;
       text-decoration-thickness: 1px;
     }
@@ -53,6 +65,9 @@
     width: 100%;
 
     &__container {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
       width: 90%;
 
@@ -68,6 +83,8 @@
       }
 
       ul {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
       }
     }
