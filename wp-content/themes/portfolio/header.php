@@ -18,9 +18,9 @@
     <link rel="apple-touch-icon" type="image/svg" href="/wp-content/themes/portfolio/resources/img/favicon.svg">
     <link rel="apple-touch-icon-precomposed" type="image/svg" href="/wp-content/themes/portfolio/resources/img/favicon.svg">
     <!--Police-->
+    <link rel="stylesheet" href="https://use.typekit.net/vit7hxw.css">
     <!--CSS-->
     <link rel="stylesheet" href="<?= dw_asset('css/style.css'); ?>">
-    <!--<link rel="stylesheet" href="https://use.typekit.net/uru3cvy.css">-->
     <!--Titre-->
     <title><?= wp_title(''); ?> - Portfolio Quentin Lequeux</title>
 </head>
@@ -34,22 +34,22 @@
             Navigation principale
         </h2>
         <ul>
-            <li>
+            <li class="menu">
                 <a href="<?= get_permalink(6)?>" title="Vers la page <?= get_the_title(6); ?>">
                     <?= get_the_title(6); ?>
                 </a>
-            </li>
-            <li>
+            </li >
+            <li class="menu">
                 <a href="<?= get_permalink(21)?>" title="Vers la page <?= get_the_title(21); ?>">
                     <?= get_the_title(21); ?>
                 </a>
             </li>
-            <li>
+            <li class="menu">
                 <a href="<?= get_permalink(24)?>" title="Vers la page <?= get_the_title(24); ?>">
                     <?= get_the_title(24); ?>
                 </a>
             </li>
-            <li>
+            <li class="menu">
                 <a href="<?= get_permalink(8)?>" title="Vers la page <?= get_the_title(8); ?>">
                     <?= get_the_title(8); ?>
                 </a>

@@ -33,11 +33,12 @@
                     </a>
                 </li>
             </ul>
-            <a class="legals" href="#" title="Vers la page des mentions légales">
+            <a class="legals" href="<?= get_permalink(69); ?>" title="Vers la page <?= get_the_title(69); ?>">
                 Mentions l&eacute;gales
             </a>
         </div>
     </nav>
 </footer>
+<script src="<?= dw_asset('js/site.js'); ?>"></script>
 </body>
 </html>

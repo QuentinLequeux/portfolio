@@ -359,6 +359,9 @@ header {
   margin: 0 auto;
   z-index: 1;
 }
+header .active {
+  color: #ff0000;
+}
 header nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -577,7 +580,7 @@ header nav ul li a:hover {
   border-radius: 2.5rem;
   height: 37.5rem;
   margin-bottom: 2rem;
-  border: 1px solid #000;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 0 20px;
 }
 .projects section article div {
   -webkit-box-orient: vertical;
@@ -645,7 +648,7 @@ header nav ul li a:hover {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    border: 1px solid #000;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 0 20px;
   }
   .projects section article div {
     -webkit-box-ordinal-group: 3;
@@ -677,6 +680,28 @@ header nav ul li a:hover {
 }
 .about h2 {
   font-size: 2rem;
+}
+
+.single {
+  height: 100vh;
+}
+.single section {
+  padding: 12rem 3rem 2rem;
+}
+.single section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.legal {
+  height: 100vh;
+}
+.legal section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  padding: 12rem 3rem 2rem;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */

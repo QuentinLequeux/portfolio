@@ -9,6 +9,10 @@ header {
   margin: 0 auto;
   z-index: 1;
 
+  .active {
+    color: #ff0000;
+  }
+
   nav {
 
     ul {

@@ -4,6 +4,7 @@
 - [x] Design
 - [x] Moodboard
 - [x] Architecture information
+- [x] Logo
 - [ ] Plan site
 
 ## To Do:
@@ -84,10 +85,17 @@
 ## Inspirations
 
 https://voyalabs.com/
+
 https://www.kittokatsu.de/about-us/
+
 https://www.david-hckh.com/
+
 https://www.niccolomiranda.com/about?
+
 https://www.poulos.co/
+
 https://www.seanhalpin.xyz/
+
 https://www.mathieuclauss.com/
+
 https://dribbble.com/shots/22901300-Contact-Page
