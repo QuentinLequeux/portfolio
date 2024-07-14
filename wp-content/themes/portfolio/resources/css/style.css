@@ -336,6 +336,8 @@ table {
   .footer__container .copyright {
     margin: auto;
     padding: 2rem 0 0 0;
+    text-align: center;
+    line-height: 1.5rem;
   }
   .footer__container .legals {
     margin: auto;
@@ -678,8 +680,13 @@ header nav ul li a:hover {
 .about {
   min-height: 100vh;
 }
-.about h2 {
-  font-size: 2rem;
+.about section {
+  padding: 12rem 3rem 2rem;
+}
+.about section h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
 }
 
 .single {
@@ -693,15 +700,46 @@ header nav ul li a:hover {
   font-weight: 700;
   text-align: center;
 }
+.single section a {
+  display: block;
+  text-align: center;
+  margin: 3rem;
+}
 
-.legal {
-  height: 100vh;
+.legal section {
+  max-width: 80vw;
+  margin: 0 auto;
+}
+.legal section h2, .legal section h3 {
+  font-weight: 700;
 }
 .legal section h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  padding: 12rem 3rem 2rem;
+  font-size: 3rem;
+  padding: 14rem 0 2rem;
   text-align: center;
+}
+.legal section h3 {
+  font-size: 2rem;
+  margin: 3rem 0 1.5rem;
+}
+.legal section p {
+  line-height: 2rem;
+  font-size: 1.125rem;
+}
+.legal section a {
+  color: #000;
+}
+.legal section .last, .legal section .modified {
+  padding-bottom: 5rem;
+}
+.legal section .modified {
+  text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+  .legal section h2 {
+    padding: 10rem 0 2rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

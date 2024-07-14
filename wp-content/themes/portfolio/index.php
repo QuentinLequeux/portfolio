@@ -26,16 +26,16 @@ Template Name: Accueil
                 R&eacute;seaux sociaux
             </h2>
             <div>
-                <a class="social" href="#">
+                <a href="https://www.facebook.com/quentin.lequeux.5/">
                     <img src="/wp-content/themes/portfolio/resources/img/facebook.svg" width="35" height="35" alt="">
                 </a>
-                <a href="#">
+                <a href="https://lu.linkedin.com/in/quentin-lequeux-8a11a3192">
                     <img src="/wp-content/themes/portfolio/resources/img/linkedin.svg" width="35" height="35" alt="">
                 </a>
-                <a href="#">
+                <a href="https://github.com/QuentinLequeux">
                     <img src="/wp-content/themes/portfolio/resources/img/github.svg" width="35" height="35" alt="">
                 </a>
-                <a href="#">
+                <a href="mailto:quent789@gmail.com">
                     <img src="/wp-content/themes/portfolio/resources/img/email.svg" width="35" height="35" alt="">
                 </a>
             </div>

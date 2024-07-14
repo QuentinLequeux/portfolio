@@ -6,9 +6,10 @@ Template Name: Mentions légales
 <?= get_header(); ?>
     <main class="legal">
         <section>
-            <h2 aria-level="2" role="heading">
-                <?= get_the_title(); ?>
-            </h2>
+            <?= get_the_content(false, null,69); ?>
+            <p class="modified">
+                Dernière modification le <?php the_modified_date(); ?>
+            </p>
         </section>
     </main>
 <?= get_footer(); ?>

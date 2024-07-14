@@ -1,7 +1,13 @@
 .about {
   min-height: 100vh;
 
-  h2 {
-    font-size: 2rem;
+  section {
+    padding: 12rem 3rem 2rem;
+
+    h2 {
+      font-size: 3rem;
+      font-weight: 700;
+      text-align: center;
+    }
   }
 }
