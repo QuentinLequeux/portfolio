@@ -362,7 +362,7 @@ header {
   z-index: 1;
 }
 header .active {
-  color: #ff0000;
+  color: #fff;
 }
 header nav ul {
   display: -webkit-box;
@@ -689,23 +689,177 @@ header nav ul li a:hover {
   text-align: center;
 }
 
-.single {
-  height: 100vh;
+.single article {
+  max-width: 80vw;
+  margin: 0 auto;
 }
-.single section {
-  padding: 12rem 3rem 2rem;
-}
-.single section h2 {
-  font-size: 2.5rem;
+.single article h2 {
+  font-size: 3rem;
   font-weight: 700;
+  padding: 12rem 0 5rem;
   text-align: center;
 }
-.single section a {
-  display: block;
+.single article div {
+  border: 1px solid #000;
+  border-radius: 2rem;
+}
+.single article div ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+.single article div ul li {
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 2rem 0;
+}
+.single article div ul li p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  padding-top: 1rem;
+}
+.single article div ul li .discover {
+  border: 1px solid #000;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  color: #000;
+  border-radius: 2rem;
+  margin-top: 1rem;
+}
+.single article div ul li a {
+  margin-top: 1rem;
+  -webkit-transition: 0.4s ease-in-out;
+  -o-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+.single article div ul li a img:hover {
+  -webkit-filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+  filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+}
+.single article div ul li .discover:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.single article div ul .link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   text-align: center;
-  margin: 3rem;
+}
+.single article section {
+  max-width: 50rem;
+  margin: 0 auto;
+}
+.single article section h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 5rem 0 2rem;
+}
+.single article section p {
+  font-size: 1.125rem;
+  margin: 0 auto;
+  line-height: 1.5rem;
+  padding-bottom: 2rem;
+}
+.single article figure {
+  text-align: center;
+  padding-top: 2rem;
+}
+.single article figure img {
+  border-radius: 1rem;
+  width: 70vw;
+}
+.single article .gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 70vw;
+}
+.single article .gallery .wp-image-164, .single article .gallery .wp-image-168 {
+  width: 100%;
+  height: auto;
+}
+.single .next {
+  max-width: 80vw;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  padding: 5rem 0;
+}
+.single .next a {
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #000;
+}
+.single .next a:hover {
+  color: #fff;
 }
 
+@media screen and (max-width: 1000px) {
+  .single article div {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .single article div ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .single article div ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 0 2rem 2rem;
+  }
+  .single article div ul li p {
+    padding: 0 0 0 2rem;
+  }
+  .single article div ul li .discover {
+    margin: 0 0 0 2rem;
+  }
+  .single article div ul li a {
+    margin: 0 0 0 2rem;
+  }
+  .single article div ul li:first-of-type {
+    padding-top: 2.5rem;
+  }
+  .single article div ul .link {
+    text-align: left;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .single article figure img {
+    width: 80vw;
+  }
+  .single article .gallery {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    max-width: 80vw;
+    gap: 0;
+  }
+}
 .legal section {
   max-width: 80vw;
   margin: 0 auto;
@@ -739,6 +893,177 @@ header nav ul li a:hover {
 @media screen and (max-width: 900px) {
   .legal section h2 {
     padding: 10rem 0 2rem;
+  }
+}
+.single article {
+  max-width: 80vw;
+  margin: 0 auto;
+}
+.single article h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  padding: 12rem 0 5rem;
+  text-align: center;
+}
+.single article div {
+  border: 1px solid #000;
+  border-radius: 2rem;
+}
+.single article div ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+.single article div ul li {
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 2rem 0;
+}
+.single article div ul li p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  padding-top: 1rem;
+}
+.single article div ul li .discover {
+  border: 1px solid #000;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  color: #000;
+  border-radius: 2rem;
+  margin-top: 1rem;
+}
+.single article div ul li a {
+  margin-top: 1rem;
+  -webkit-transition: 0.4s ease-in-out;
+  -o-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+.single article div ul li a img:hover {
+  -webkit-filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+  filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+}
+.single article div ul li .discover:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.single article div ul .link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+}
+.single article section {
+  max-width: 50rem;
+  margin: 0 auto;
+}
+.single article section h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 5rem 0 2rem;
+}
+.single article section p {
+  font-size: 1.125rem;
+  margin: 0 auto;
+  line-height: 1.5rem;
+  padding-bottom: 2rem;
+}
+.single article figure {
+  text-align: center;
+  padding-top: 2rem;
+}
+.single article figure img {
+  border-radius: 1rem;
+  width: 70vw;
+}
+.single article .gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 70vw;
+}
+.single article .gallery .wp-image-164, .single article .gallery .wp-image-168 {
+  width: 100%;
+  height: auto;
+}
+.single .next {
+  max-width: 80vw;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  padding: 5rem 0;
+}
+.single .next a {
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #000;
+}
+.single .next a:hover {
+  color: #fff;
+}
+
+@media screen and (max-width: 1000px) {
+  .single article div {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .single article div ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .single article div ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 0 2rem 2rem;
+  }
+  .single article div ul li p {
+    padding: 0 0 0 2rem;
+  }
+  .single article div ul li .discover {
+    margin: 0 0 0 2rem;
+  }
+  .single article div ul li a {
+    margin: 0 0 0 2rem;
+  }
+  .single article div ul li:first-of-type {
+    padding-top: 2.5rem;
+  }
+  .single article div ul .link {
+    text-align: left;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .single article figure img {
+    width: 80vw;
+  }
+  .single article .gallery {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    max-width: 80vw;
+    gap: 0;
   }
 }
 

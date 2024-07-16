@@ -1,19 +1,212 @@
 .single {
-  height: 100vh;
 
-  section {
-    padding: 12rem 3rem 2rem;
+  article {
+    max-width: 80vw;
+    margin: 0 auto;
 
     h2 {
-      font-size: 2.5rem;
+      font-size: 3rem;
       font-weight: 700;
+      padding: 12rem 0 5rem;
       text-align: center;
     }
 
-    a {
-      display: block;
+    div {
+      border: 1px solid #000;
+      border-radius: 2rem;
+
+      ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+
+        li {
+          font-size: 1rem;
+          font-weight: 700;
+          padding: 2rem 0;
+
+          p {
+            font-size: 1rem;
+            line-height: 1.5rem;
+            font-weight: 500;
+            padding-top: 1rem;
+          }
+
+          .discover {
+            border: 1px solid #000;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            color: #000;
+            border-radius: 2rem;
+            margin-top: 1rem;
+          }
+
+          a {
+            margin-top: 1rem;
+            -webkit-transition: 0.4s ease-in-out;
+            -o-transition: 0.4s ease-in-out;
+            transition: 0.4s ease-in-out;
+
+            img:hover {
+              -webkit-filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+              filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+            }
+          }
+
+          .discover:hover {
+            background-color: rgba(255,255,255,.9);
+          }
+        }
+
+        .link {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+    }
+
+    section {
+      max-width: 50rem;
+      margin: 0 auto;
+
+      h3 {
+        font-size: 2rem;
+        font-weight: 700;
+        padding: 5rem 0 2rem;
+      }
+
+      p {
+        font-size: 1.125rem;
+        margin: 0 auto;
+        line-height: 1.5rem;
+        padding-bottom: 2rem;
+      }
+    }
+
+    figure {
       text-align: center;
-      margin: 3rem;
+      padding-top: 2rem;
+
+      img {
+        border-radius: 1rem;
+        width: 70vw;
+      }
+    }
+
+    .gallery {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      gap: 2rem;
+      max-width: 70vw;
+
+      .wp-image-164, .wp-image-168 {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .next {
+    max-width: 80vw;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    padding: 5rem 0;
+
+    a {
+      font-size: 1rem;
+      font-weight: 700;
+      text-decoration: none;
+      color: #000;
+    }
+
+    a:hover {
+      color: #fff;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px){
+  .single {
+
+    article {
+
+      div {
+        max-width: 400px;
+        margin: 0 auto;
+
+        ul {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+
+          li {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            padding: 0 0 2rem 2rem;
+
+            p {
+              padding: 0 0 0 2rem;
+            }
+
+            .discover {
+              margin: 0 0 0 2rem;
+            }
+
+            a {
+              margin: 0 0 0 2rem;
+            }
+          }
+
+          li:first-of-type {
+            padding-top: 2.5rem;
+          }
+
+          .link {
+            text-align: left;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+          }
+        }
+      }
+
+      figure {
+
+        img {
+          width: 80vw;
+        }
+      }
+
+      .gallery {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        max-width: 80vw;
+        gap: 0;
+      }
     }
   }
 }

@@ -29,7 +29,7 @@ Template Name: Projets
                         <p itemprop="description">
                             <?= get_the_content(); ?>
                         </p>
-                        <a href="<?= get_permalink(); ?>" title="Vers le projet <?= get_the_title(); ?>" itemprop="url">
+                        <a href="<?= get_field('href'); ?>" title="Vers le projet <?= get_the_title(); ?>" itemprop="url">
                             D&eacute;couvrir
                         </a>
                     </div>
