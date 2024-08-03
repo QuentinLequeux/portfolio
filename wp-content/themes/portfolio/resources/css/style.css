@@ -84,7 +84,6 @@ table {
 }
 .cards .card {
   border-radius: 40px;
-  box-shadow: rgba(0, 0, 0, 0.2) 0 0 20px;
 }
 .cards .logo {
   grid-area: 1/1/2/2;
@@ -183,6 +182,7 @@ table {
 .cards .article1, .cards .article2 {
   height: 400px;
   position: relative;
+  transition: transform 0.1s ease-in-out 0.1s;
 }
 .cards .article1 h2, .cards .article2 h2 {
   font-size: 1.5rem;
@@ -191,16 +191,16 @@ table {
   bottom: 2rem;
   left: 2rem;
   padding-right: 1rem;
-}
-.cards .article1 img:hover, .cards .article2 img:hover {
-  transform: scale(1.05) translate(0, 0);
+  z-index: 1;
 }
 .cards .article1 img, .cards .article2 img {
   border-radius: 40px;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.1s ease-in-out 0.1s;
+}
+.cards .article1:hover, .cards .article2:hover {
+  transform: scale(1.05) translate(0, 0);
 }
 .cards .hello {
   grid-area: 5/1/6/5;
@@ -245,6 +245,12 @@ table {
   }
   .cards .socials {
     grid-area: 3/1/3/5;
+  }
+  .cards .socials div {
+    display: flex;
+  }
+  .cards .socials div a {
+    margin: 0 3rem 0 0;
   }
   .cards .project {
     grid-area: 4/1/4/5;
@@ -381,7 +387,7 @@ header nav ul li a {
   font-size: 1rem;
   font-weight: 700;
   display: inline-block;
-  padding: 1.5rem 2rem;
+  padding: 1.5rem 1rem;
   -webkit-transition: 0.4s ease-in-out;
   -o-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
@@ -402,6 +408,9 @@ header nav ul li a:hover {
   header nav ul li a {
     padding: 1.5rem 1rem;
   }
+}
+.contact {
+  animation: fadein 2s;
 }
 .contact section {
   display: -webkit-box;
@@ -481,11 +490,6 @@ header nav ul li a:hover {
   border: none;
   border-bottom: 1px solid #000;
 }
-.contact section fieldset input:focus, .contact section fieldset textarea:focus {
-  outline: none;
-  border: 2px solid #ff0000;
-  border-radius: 2rem;
-}
 .contact section fieldset textarea {
   margin-bottom: 2rem;
   max-width: 31.25rem;
@@ -534,6 +538,14 @@ header nav ul li a:hover {
   filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
 }
 
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @media screen and (max-width: 1000px) {
   .contact section {
     -webkit-box-orient: vertical;
@@ -582,7 +594,6 @@ header nav ul li a:hover {
   border-radius: 2.5rem;
   height: 37.5rem;
   margin-bottom: 2rem;
-  box-shadow: rgba(0, 0, 0, 0.2) 0 0 20px;
 }
 .projects section article div {
   -webkit-box-orient: vertical;

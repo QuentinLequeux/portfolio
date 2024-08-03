@@ -9,7 +9,7 @@ Template Name: Accueil
             <h2 aria-level="2" role="heading" class="sro">
                 Logo
             </h2>
-            <img src="/wp-content/themes/portfolio/resources/img/logo2.svg" alt="" width="250" height="250">
+            <img src="/wp-content/themes/portfolio/resources/img/logo2.svg" alt="logo personnel" width="250" height="250">
         </section>
         <section class="card description">
             <div>
