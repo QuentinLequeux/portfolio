@@ -694,7 +694,11 @@ header nav ul li a:hover {
   padding: 12rem 4rem 4rem;
 }
 .about .aboutme .me {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 10rem;
 }
@@ -709,11 +713,18 @@ header nav ul li a:hover {
 }
 .about .aboutme .me img {
   border-radius: 2rem;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 .about .skills div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 6rem;
   border-top: 1px solid #000;
@@ -722,21 +733,30 @@ header nav ul li a:hover {
   overflow-x: clip;
 }
 .about .skills div .scroll {
+  -webkit-animation: slide 10s 1s linear infinite;
   animation: slide 10s 1s linear infinite;
   margin-left: 2rem;
 }
 .about .skills div .scroll .fill {
+  -webkit-filter: brightness(0);
   filter: brightness(0);
 }
 .about .history {
-  max-width: 80vw;
-  margin: 0 auto;
+  margin-left: 10%;
 }
 .about .history h2 {
   font-size: 2rem;
   font-weight: 700;
   text-align: center;
   margin: 4rem 0;
+}
+.about .history .timeline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
 }
 .about .history .status {
   border-top: 2px solid #000;
@@ -753,6 +773,33 @@ header nav ul li a:hover {
   left: 0;
   background-color: #000;
 }
+.about .history .history-content {
+  min-width: 31.25rem;
+}
+.about .history .history-content p {
+  font-weight: 700;
+  font-size: 1rem;
+  margin: 1.5rem 0;
+  width: 90%;
+  line-height: 1.5rem;
+}
+.about .history .history-content p:last-of-type {
+  font-weight: 500;
+  font-size: 1rem;
+}
+.about .history .arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.about .history .arrow .left, .about .history .arrow .right {
+  font-size: 2rem;
+  margin: 1rem 5rem 0 0;
+  cursor: pointer;
+}
 .about .services {
   max-width: 80vw;
   margin: 0 auto;
@@ -764,7 +811,10 @@ header nav ul li a:hover {
   margin: 4rem 0;
 }
 .about .services .service {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   gap: 2rem;
 }
@@ -785,8 +835,14 @@ header nav ul li a:hover {
   line-height: 1.5rem;
 }
 .about .stats .stat {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   gap: 10rem;
   border-bottom: 1px solid #000;
@@ -799,8 +855,15 @@ header nav ul li a:hover {
   padding: 2rem 0;
 }
 .about .contactme {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   max-width: 80vw;
   margin: 4rem auto;
@@ -822,18 +885,36 @@ header nav ul li a:hover {
   padding: 1rem 3rem;
   border-radius: 2rem;
   margin-bottom: 4rem;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  -o-transition: transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
 }
 .about .contactme a:hover {
+  -webkit-transform: scale(1.05) translate(0, 0);
+  -ms-transform: scale(1.05) translate(0, 0);
   transform: scale(1.05) translate(0, 0);
   background-color: rgba(255, 255, 255, 0.8);
 }
 
-@keyframes slide {
+@-webkit-keyframes slide {
   from {
+    -webkit-transform: translateX(0);
     transform: translateX(0);
   }
   to {
+    -webkit-transform: translateX(-300px);
+    transform: translateX(-300px);
+  }
+}
+@keyframes slide {
+  from {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(-300px);
     transform: translateX(-300px);
   }
 }
@@ -842,17 +923,28 @@ header nav ul li a:hover {
     padding: 10rem 0 4rem;
   }
   .about .aboutme .me {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     gap: 4rem;
   }
   .about .aboutme .me div {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
     order: 2;
   }
   .about .aboutme .me img {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
     order: 1;
   }
   .about .services .service {
+    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
   .about .services .service article {
@@ -861,11 +953,26 @@ header nav ul li a:hover {
   .about .stats .stat {
     gap: 5rem;
   }
-  @keyframes slide {
+  .about .contactme a {
+    width: 90%;
+  }
+  @-webkit-keyframes slide {
     from {
+      -webkit-transform: translateX(0);
       transform: translateX(0);
     }
     to {
+      -webkit-transform: translateX(-1600px);
+      transform: translateX(-1600px);
+    }
+  }
+  @keyframes slide {
+    from {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+    to {
+      -webkit-transform: translateX(-1600px);
       transform: translateX(-1600px);
     }
   }
