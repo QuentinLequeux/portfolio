@@ -538,6 +538,14 @@ header nav ul li a:hover {
   filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
 }
 
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @keyframes fadein {
   from {
     opacity: 0;
@@ -574,6 +582,9 @@ header nav ul li a:hover {
 }
 .projects section {
   padding: 12rem 3rem 2rem;
+  overflow: scroll;
+  height: 100vh;
+  scrollbar-width: thin;
 }
 .projects section h2 {
   font-size: 3rem;
@@ -594,6 +605,8 @@ header nav ul li a:hover {
   border-radius: 2.5rem;
   height: 37.5rem;
   margin-bottom: 2rem;
+  position: sticky;
+  top: 5vh;
 }
 .projects section article div {
   -webkit-box-orient: vertical;
@@ -661,7 +674,6 @@ header nav ul li a:hover {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    box-shadow: rgba(0, 0, 0, 0.2) 0 0 20px;
   }
   .projects section article div {
     -webkit-box-ordinal-group: 3;
@@ -1062,6 +1074,8 @@ header nav ul li a:hover {
 .single article figure img {
   border-radius: 1rem;
   width: 70vw;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 0 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0 20px;
 }
 .single article .gallery {
   display: -webkit-box;
@@ -1268,6 +1282,8 @@ header nav ul li a:hover {
 .single article figure img {
   border-radius: 1rem;
   width: 70vw;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 0 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0 20px;
 }
 .single article .gallery {
   display: -webkit-box;
