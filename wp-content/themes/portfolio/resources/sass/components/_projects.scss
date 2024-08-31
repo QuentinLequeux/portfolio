@@ -17,14 +17,15 @@
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -ms-flex-pack: distribute;
-      justify-content: space-around;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
       background-color: #ffaaaa;
       border-radius: 2.5rem;
-      height: 37.5rem;
+      min-height: 30rem;
       margin-bottom: 2rem;
       position: sticky;
       top: 5vh;
@@ -35,7 +36,7 @@
         -ms-flex-direction: column;
         flex-direction: column;
         max-width: 37.5rem;
-        padding: 0 2rem;
+        padding: 0 3rem;
 
         h3 {
           font-size: 2rem;
@@ -74,10 +75,11 @@
       }
 
       img {
-        border-radius: 2.5rem;
+        border-radius: 0 2rem 2rem 0;
         -o-object-fit: cover;
         object-fit: cover;
-        max-width: 100%;
+        width: 50%;
+        height: 30rem;
       }
     }
 
@@ -109,13 +111,14 @@
         -webkit-box-pack: justify;
         -ms-flex-pack: justify;
         justify-content: space-between;
+        top: -10vh;
 
         div {
           -webkit-box-ordinal-group: 3;
           -ms-flex-order: 2;
           order: 2;
-          padding: 0 1rem;
-          min-height: 325px;
+          padding: 1rem 1rem 0;
+          min-height: 18rem;
 
           h3 {
             padding-top: 1rem;
@@ -130,6 +133,8 @@
           -webkit-box-ordinal-group: 2;
           -ms-flex-order: 1;
           order: 1;
+          width: 100%;
+          border-radius: 2rem 2rem 0 0;
         }
       }
     }
@@ -143,9 +148,14 @@
 
       article {
 
+        div {
+          min-height: 24rem;
+        }
+
         img {
           max-height: 15.625rem;
           border-radius: 2.5rem 2.5rem 0 0;
+          width: 100%;
         }
       }
     }
