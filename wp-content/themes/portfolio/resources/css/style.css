@@ -208,7 +208,7 @@ table {
   bottom: 2rem;
   left: 2rem;
   padding-right: 1rem;
-  z-index: 1;
+  z-index: 0;
 }
 .cards .article1 img, .cards .article2 img {
   border-radius: 40px;
@@ -234,6 +234,7 @@ table {
 .cards .hello div h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
+  text-align: center;
 }
 .cards .hello div a {
   font-size: 2rem;
