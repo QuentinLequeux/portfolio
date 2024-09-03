@@ -1,0 +1,42 @@
+.single_article {
+  max-width: 60%;
+  margin: 0 auto;
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 12rem auto 2rem;
+    text-align: center;
+  }
+
+  p:first-of-type {
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    opacity: .6;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 3rem auto;
+    border-radius: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .single_article {
+    max-width: 80%;
+
+    h2 {
+      margin: 10rem auto 2rem;
+    }
+  }
+}

@@ -2,6 +2,7 @@
 /*
 Template Name: Contact
 */
+/** @var array $errors */
 ?>
 <?= get_header(); ?>
     <main class="contact">
@@ -13,7 +14,7 @@ Template Name: Contact
                 <p class="required">
                     Les champs marqu&eacute;s d'un <span class="star">*</span> sont obligatoires&nbsp;!
                 </p>
-                <form action="" method="post">
+                <form action="validator.php" method="POST">
                     <fieldset>
                         <div>
                             <label for="name">

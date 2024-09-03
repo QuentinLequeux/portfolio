@@ -133,12 +133,20 @@
     a {
       font-size: 1rem;
       font-weight: 700;
-      text-decoration: none;
       color: #000;
+      -webkit-text-decoration-color: transparent;
+      text-decoration-color: transparent;
+      -webkit-transition: text-decoration-thickness 0.4s ease-in-out, -webkit-text-decoration-color 0.4s ease-in-out;
+      transition: text-decoration-thickness 0.4s ease-in-out, -webkit-text-decoration-color 0.4s ease-in-out;
+      -o-transition: text-decoration-color 0.4s ease-in-out, text-decoration-thickness 0.4s ease-in-out;
+      transition: text-decoration-color 0.4s ease-in-out, text-decoration-thickness 0.4s ease-in-out;
+      transition: text-decoration-color 0.4s ease-in-out, text-decoration-thickness 0.4s ease-in-out, -webkit-text-decoration-color 0.4s ease-in-out;
     }
 
     a:hover {
-      color: #fff;
+      -webkit-text-decoration-color: #000;
+      text-decoration-color: #000;
+      text-decoration-thickness: 1px;
     }
   }
 }

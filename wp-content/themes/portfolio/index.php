@@ -58,11 +58,11 @@ Template Name: Accueil
                         <p>
                             <?= get_the_content(null, false, 43); ?>
                         </p>
-                        <a href="#">
+                        <a href="http://localhost:8888/service-dentraide-familiale/">
                             D&eacute;couvrir
                         </a>
                     </div>
-                    <img src="<?= get_field('img', 43); ?>" width="700" height="400" alt="">
+                    <img src="<?= get_field('img', 43); ?>" width="700" height="400" alt="image du projet">
                 <?php endwhile;
                 else: echo '<p>Aucun projets disponible</p>';
                 endif; ?>
@@ -72,16 +72,16 @@ Template Name: Accueil
             <h2 aria-level="2" role="heading">
                 <?= get_the_title(37); ?>
             </h2>
-            <a href="<?= get_field('href', 37); ?>" title="Vers">
-                <img src="<?= get_field('img', 37); ?>" alt="" height="400" width="800">
+            <a href="<?= get_permalink(37); ?>" title="Vers l'article">
+                <img src="<?= get_field('img', 37); ?>" alt="image d'un article" height="400" width="800">
             </a>
         </section>
         <section class="card article2">
             <h2 aria-level="2" role="heading">
                 <?= get_the_title(40); ?>
             </h2>
-            <a href="<?= get_field('href', 40); ?>" title="Vers">
-                <img src="<?= get_field('img', 40); ?>" alt="" height="400" width="800">
+            <a href="<?= get_permalink(40); ?>" title="Vers l'article">
+                <img src="<?= get_field('img', 40); ?>" alt="image d'un article" height="400" width="800">
             </a>
         </section>
         <section class="card hello">
